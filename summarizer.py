@@ -3,12 +3,17 @@ import nltk
 from newspaper import Article
 nltk.download('punkt')
 
-url = ""
+from linkScraper import *
 
-article = Article(url)
+summaries = []
 
-article.download()
-article.parse()
-article.nlp()
+for url in urls:
+    link = url
 
-summary = article.summary
+    article = Article(link)
+
+    article.download()
+    article.parse()
+    article.nlp()
+
+    summaries.append(article.summary)
