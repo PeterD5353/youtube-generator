@@ -2,14 +2,10 @@ import nltk
 from newspaper import Article
 from gnews import GNews
 from gtts import gTTS
-from IPython.display import Audio, display
-from keybert import KeyBERT
 from mutagen.mp3 import MP3
 from moviepy.editor import AudioFileClip, ImageClip, CompositeVideoClip, TextClip, VideoFileClip
 from moviepy.video.tools.subtitles import SubtitlesClip
 from bing_image_downloader import downloader
-import autosub
-import os
 
 nltk.download('punkt')
 
@@ -67,5 +63,5 @@ def combine_photo_and_audio(image, audio):
   video_clip.write_videofile("render.mp4")
 
 # run the function on the audio and image 
-combine_photo_and_audio(f'/content/dataset/{title}/Image_1.jpg', 'tts.mp3')
+combine_photo_and_audio(f'C:/Users/Peter/Desktop/projects/youtube-generator/dataset/{title}/Image_1.png', 'tts.mp3')
 
